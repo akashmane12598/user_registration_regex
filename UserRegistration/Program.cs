@@ -8,10 +8,11 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Program");
-            string fname, lname,email,phone_no;
+            string fname, lname,email,phone_no,password;
             string name_regex;
             string regex_email;
             string phone_no_regex;
+            string password_regex;
             while (true)
             {         
                 Console.WriteLine("Enter your first name(only first letter in CAPS): ");
@@ -71,6 +72,21 @@ namespace UserRegistration
                 else
                 {
                     Console.WriteLine("Invalid Phone Number");
+                }
+            }
+            while (true)
+            {
+                Console.WriteLine("Set a password: ");
+                password = Console.ReadLine();
+                password_regex = @"[\w]{8,}";
+                if (Regex.IsMatch(password, password_regex))
+                {
+                    Console.WriteLine("Password set Successfully");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Enter password again");
                 }
             }
         }
