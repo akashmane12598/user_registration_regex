@@ -43,7 +43,7 @@ namespace UserRegistration
                     Console.WriteLine("Invalid Last Name");
                 }
             }
-            Console.WriteLine("Your Valid Entered Name is "+fname+" "+lname);
+            
             while (true)
             {
                 Console.WriteLine("Enter your Email-id: ");
@@ -82,13 +82,16 @@ namespace UserRegistration
                 if (Regex.IsMatch(password, password_regex))
                 {
                     Console.WriteLine("Password set Successfully");
-                    
+                    break;
                 }
                 else
                 {
                     Console.WriteLine("Enter password again");
                 }
             }
+            Console.WriteLine("Your Valid Entered Name is " + fname + " " + lname);
+            Console.WriteLine("Your Valid Entered Email-Id is " + email);
+            Console.WriteLine("Your Valid Entered Phone Number is " + phone_no);
         }
     }
 }
