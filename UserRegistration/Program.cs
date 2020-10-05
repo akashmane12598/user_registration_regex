@@ -78,11 +78,11 @@ namespace UserRegistration
             {
                 Console.WriteLine("Set a password: ");
                 password = Console.ReadLine();
-                password_regex = @"[\w]{8,}";
+                password_regex = @"((?=.*[A-Z])(?=.*\w).{8,})";
                 if (Regex.IsMatch(password, password_regex))
                 {
                     Console.WriteLine("Password set Successfully");
-                    break;
+                    
                 }
                 else
                 {
