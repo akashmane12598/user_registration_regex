@@ -8,8 +8,9 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Program");
-            string fname, lname;
+            string fname, lname,email;
             string name_regex;
+            string regex_email;
             while (true)
             {         
                 Console.WriteLine("Enter your first name(only first letter in CAPS): ");
@@ -41,6 +42,21 @@ namespace UserRegistration
                 }
             }
             Console.WriteLine("Your Valid Entered Name is "+fname+" "+lname);
+            while (true)
+            {
+                Console.WriteLine("Enter your Email-id: ");
+                email = Console.ReadLine();
+                regex_email = @"^[A-Za-z]+[\w.+-]*[@][A-Za-z0-9]+[.][a-z]{2,}[.]?[a-z]*$";
+                if (Regex.IsMatch(email, regex_email))
+                {
+                    Console.WriteLine("Valid Email-Id");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Email-Id");
+                }
+            }
         }
     }
 }
