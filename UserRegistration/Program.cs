@@ -17,7 +17,7 @@ namespace UserRegistration
             {         
                 Console.WriteLine("Enter your first name(only first letter in CAPS): ");
                 fname = Console.ReadLine();
-                name_regex = @"^[A-Z]{1}[a-z]{2,}";
+                name_regex = @"^[A-Z]{1}[a-z]{2,}$";
                 if (Regex.IsMatch(fname, name_regex))
                 {
                     Console.WriteLine("Valid First Name");
@@ -32,7 +32,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("Enter your last name(only first letter in CAPS): ");
                 lname = Console.ReadLine();
-                name_regex = @"^[A-Z]{1}[a-z]{2,}";
+                name_regex = @"^[A-Z]{1}[a-z]{2,}$";
                 if (Regex.IsMatch(lname, name_regex))
                 {
                     Console.WriteLine("Valid Last Name");
@@ -48,7 +48,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("Enter your Email-id: ");
                 email = Console.ReadLine();
-                regex_email = @"^[A-Za-z]+[.+-]?[a-z]*[@][A-Za-z0-9]+[.][a-z]{2,}[.]?[a-z]*$";
+                regex_email = @"^[A-Za-z]+[.+-]?[a-z]*[@][A-Za-z0-9]+[.][a-z]{2,}([.][a-z]{2})?$";
                 if (Regex.IsMatch(email, regex_email))
                 {
                     Console.WriteLine("Valid Email-Id: "+email);
