@@ -48,7 +48,7 @@ namespace UserRegistration
             {
                 Console.WriteLine("Enter your Email-id: ");
                 email = Console.ReadLine();
-                regex_email = @"^[A-Za-z]+[\w.+-]*[@][A-Za-z0-9]+[.][a-z]{2,}[.]?[a-z]*$";
+                regex_email = @"^[A-Za-z]+[.+-]?[a-z]*[@][A-Za-z0-9]+[.][a-z]{2,}[.]?[a-z]*$";
                 if (Regex.IsMatch(email, regex_email))
                 {
                     Console.WriteLine("Valid Email-Id: "+email);
